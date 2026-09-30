@@ -78,7 +78,7 @@ Repeat
 ## 📈 Progress
 
 * [x] Stack
-* [ ] Queue
+* [x] Queue
 * [ ] Linked List
 * [ ] Trees
 * [ ] BST
