@@ -79,7 +79,7 @@ Repeat
 
 * [x] Stack
 * [x] Queue
-* [ ] Linked List
+* [x] Linked List
 * [ ] Trees
 * [ ] BST
 * [ ] Heap
