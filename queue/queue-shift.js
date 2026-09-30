@@ -2,14 +2,13 @@
 // First In, First Out
 //
 // enqueue -> O(1)
-// dequeue -> O(1)
+// dequeue -> O(N)
 // peek    -> O(1)
 // isEmpty -> O(1)
 // size    -> O(1)
 
 class Queue {
     store = [];
-    front = 0;
 
     enqueue(x) {
         this.store.push(x)
