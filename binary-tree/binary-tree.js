@@ -131,22 +131,30 @@ class BinaryTree {
 
     // TODO
     height() {
-        const stack = [this.root];
-        let count = 0;
+        if (!this.root) {
+            return 0;
+        }
+        const stack = [[this.root, 0]];
+        let maxHeight = 0;
 
         while (stack.length > 0) {
-            const node = stack.pop();
-            count++;
+            const [node, depth] = stack.pop();
 
-            if (node.left) stack.push(node.left);
-            if (node.right) stack.push(node.right);
+            maxHeight = Math.max(maxHeight, depth)
+
+            if (node.left) stack.push([node.left, depth + 1]);
+            if (node.right) stack.push([node.right, depth + 1]);
         }
 
-        return count;
+        return maxHeight;
     }
 
     // TODO
     size() {
+        if (!this.root) {
+            return 0;
+        }
+
         let count = 0;
         const queue = [this.root];
         while (queue.length > 0) {
